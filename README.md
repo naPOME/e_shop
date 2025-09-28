@@ -31,7 +31,7 @@ This is a full-featured e-commerce application with product management capabilit
 ### Backend
 - Laravel 12.x
 - PHP 8.2+
-- SQLite database (default)
+- MySQL database
 - RESTful API
 
 ### Frontend
@@ -83,11 +83,15 @@ e-shop/
    php artisan key:generate
    ```
 
-4. Configure your database in `.env` (SQLite is configured by default):
+4. Configure your database in `.env` (MySQL is configured by default):
    ```bash
-   # For SQLite (default)
-   DB_CONNECTION=sqlite
-   # The database file will be created at database/database.sqlite
+   # For MySQL (default)
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_username
+   DB_PASSWORD=your_password
    ```
 
 5. Run database migrations:
@@ -207,8 +211,9 @@ These can be changed in the `.env` file or environment variables.
 ### Common Issues
 
 1. **Database connection errors**
-   - Ensure SQLite extension is enabled in PHP
-   - Check that `database/database.sqlite` file exists and is writable
+   - Ensure MySQL extension is enabled in PHP
+   - Check that MySQL server is running
+   - Verify database credentials in `.env` file
 
 2. **CORS errors**
    - Ensure the frontend is configured to use the correct backend URL
