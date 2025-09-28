@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Clear all categories
+        $this->call(ClearCategoriesSeeder::class);
+        
         // User::factory(10)->create();
 
         User::factory()->create([

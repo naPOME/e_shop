@@ -12,7 +12,7 @@ export default function ProductActions({ product }: ProductActionsProps) {
   
   const handleAddToCart = () => {
     addToCart(product, quantity);
-    alert(`Added ${quantity} ${product.name} to cart`);
+    // Alert removed as requested
   };
   
   return (

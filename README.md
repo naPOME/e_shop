@@ -6,15 +6,28 @@ A full-stack e-commerce application built with Laravel (Backend) and Next.js (Fr
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Project Structure](#project-structure)
-- [Backend Setup](#backend-setup)
-- [Frontend Setup](#frontend-setup)
-- [Running the Application](#running-the-application)
-- [API Endpoints](#api-endpoints)
-- [Database Schema](#database-schema)
+- [E-Shop Application](#e-shop-application)
+  - [Table of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [Tech Stack](#tech-stack)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
+  - [Prerequisites](#prerequisites)
+  - [Project Structure](#project-structure)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+  - [Running the Application](#running-the-application)
+    - [Development Mode](#development-mode)
+    - [Alternative: Using Concurrent Scripts](#alternative-using-concurrent-scripts)
+  - [API Endpoints](#api-endpoints)
+    - [Products](#products)
+    - [Categories](#categories)
+  - [Database Schema](#database-schema)
+    - [Products Table](#products-table)
+    - [Categories Table](#categories-table)
+  - [Admin Credentials](#admin-credentials)
+    - [Useful Commands](#useful-commands)
+  - [License](#license)
 
 ## Project Overview
 
@@ -206,25 +219,6 @@ Default admin credentials for category management:
 
 These can be changed in the `.env` file or environment variables.
 
-## Troubleshooting
-
-### Common Issues
-
-1. **Database connection errors**
-   - Ensure MySQL extension is enabled in PHP
-   - Check that MySQL server is running
-   - Verify database credentials in `.env` file
-
-2. **CORS errors**
-   - Ensure the frontend is configured to use the correct backend URL
-   - Check that the backend is running on `http://localhost:8000`
-
-3. **Missing dependencies**
-   - Run `composer install` in the backend directory
-   - Run `npm install` in the frontend directory
-
-4. **Port conflicts**
-   - Change the port in `php artisan serve --port=8001`
 
 ### Useful Commands
 

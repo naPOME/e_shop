@@ -157,7 +157,7 @@ export default function AdminDashboard() {
   };
   
   const handleDelete = async (id: number) => {
-    if (!confirm('Are you sure you want to delete this product?')) return;
+    // Confirm dialog removed as requested
     
     try {
       await productApi.delete(id);
